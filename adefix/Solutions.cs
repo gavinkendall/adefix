@@ -36,21 +36,21 @@
         {
             Console.WriteLine("Finding Adobe registry keys");
 
-            if (Registry.CurrentUser.GetValue("Software\\Adobe") == null)
+            if (Registry.CurrentUser.OpenSubKey("Software\\Adobe") == null)
             {
                 Console.WriteLine("Cannot find Adobe registry key");
 
                 return;
             }
 
-            if (Registry.CurrentUser.GetValue("Software\\Adobe\\Adept") == null)
+            if (Registry.CurrentUser.OpenSubKey("Software\\Adobe\\Adept") == null)
             {
                 Console.WriteLine("Cannot find Adobe Adept registry key");
 
                 return;
             }
 
-            if (Registry.CurrentUser.GetValue("Software\\Adobe\\Adept\\Device") == null)
+            if (Registry.CurrentUser.OpenSubKey("Software\\Adobe\\Adept\\Device") == null)
             {
                 Console.WriteLine("Cannot find Adobe Adept Device registry key");
 

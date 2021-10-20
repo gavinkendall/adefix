@@ -36,6 +36,13 @@
         {
             Console.WriteLine("Finding Adobe Adept registry key");
 
+            if (Registry.CurrentUser.GetValue("Software\\Adobe") == null)
+            {
+                Console.WriteLine("Cannot find Adobe Adept registry key");
+
+                return;
+            }
+
             RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Adobe", true);
 
             if (registryKey != null)

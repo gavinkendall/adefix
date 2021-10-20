@@ -6,7 +6,14 @@
     {
         public static void Main()
         {
-            ShowMenu();
+            try
+            {
+                ShowMenu();
+            }
+            catch
+            {
+                Console.WriteLine("An error was encountered");
+            }
         }
 
         private static void Continue()
@@ -23,8 +30,8 @@
             {
                 Console.Clear();
 
-                Console.WriteLine("Adobe Digital Editions Fix (v1.0)");
-                Console.WriteLine("Programming by Gavin Kendall");
+                Console.WriteLine("Adobe Digital Editions Fix (v1.1)");
+                Console.WriteLine("Developed by Gavin Kendall");
                 Console.WriteLine("==============================================");
 
                 Console.WriteLine("\nPlease select an option.");
